@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ficha CNPJ — 51.439.954/0001-36</title>
+  <style>
+    :root{font-family:Inter,system-ui,Segoe UI,Helvetica,Arial;color:#111}
+    body{margin:0;background:#f5f7fb;padding:24px;display:flex;justify-content:center}
+    .card{width:100%;max-width:980px;background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(12,20,40,0.08);padding:20px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    h1{margin:0;font-size:20px}
+    .meta{color:#586069;font-size:13px}
+    .controls{margin-top:18px;display:flex;flex-wrap:wrap;gap:10px}
+    button.btn{background:#0b63d6;color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+    button.ghost{background:#eef3ff;color:#0b63d6;border:1px solid #d6e6ff}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:18px}
+    .main{padding:12px;border-radius:10px;background:#fbfdff;min-height:360px;overflow:auto}
+    .side{padding:12px;border-radius:10px;background:#fff8f0;min-height:360px}
+    pre{white-space:pre-wrap;word-break:break-word;background:#0f1724;color:#dbeafe;padding:12px;border-radius:8px;overflow:auto}
+    .section{margin-bottom:14px}
+    .label{font-size:12px;color:#4b5563;margin-bottom:6px}
+    .value{font-size:15px;color:#0b1225}
+    .link{color:#0b63d6;text-decoration:underline;cursor:pointer}
+    footer{margin-top:16px;color:#6b7280;font-size:13px}
+    @media (max-width:880px){.grid{grid-template-columns:1fr;}.side{order:2}}
+  </style>
+</head>
+<body>
+  <div class="card" role="main">
+    <header>
+      <div>
+        <h1 id="company-name">Carregando...</h1>
+        <div class="meta" id="company-cnpj">—</div>
+      </div>
+      <div style="text-align:right">
+        <div class="meta">Ficha gerada localmente</div>
+        <div style="margin-top:6px"><small class="meta">Dados públicos consultados: cadastros/portais</small></div>
+      </div>
+    </header>
+
+    <div class="controls" aria-hidden="false">
+      <button class="btn" data-action="show" data-target="overview">Visão geral</button>
+      <button class="btn ghost" data-action="show" data-target="address">Endereço</button>
+      <button class="btn" data-action="show" data-target="activities">Atividades (CNAE)</button>
+      <button class="btn ghost" data-action="show" data-target="partners">Sócios / Administração</button>
+      <button class="btn" data-action="show" data-target="contact">Contato</button>
+      <button class="btn ghost" data-action="show" data-target="raw">JSON bruto</button>
+      <button class="btn" id="btn-open-receita">Abrir Receita (comprovante)</button>
+      <button class="btn ghost" id="btn-open-maps">Abrir no Maps</button>
+    </div>
+
+    <div class="grid">
+      <div class="main" id="main-content" tabindex="0">
+        <!-- conteúdo dinâmico será injetado aqui -->
+      </div>
+
+      <aside class="side" aria-label="Resumo rápido">
+        <div class="section">
+          <div class="label">Situação</div>
+          <div class="value" id="quick-status">—</div>
+        </div>
+        <div class="section">
+          <div class="label">Abertura</div>
+          <div class="value" id="quick-open">—</div>
+        </div>
+        <div class="section">
+          <div class="label">Capital social</div>
+          <div class="value" id="quick-capital">—</div>
+        </div>
+        <div class="section">
+          <div class="label">Regime</div>
+          <div class="value" id="quick-regime">—</div>
+        </div>
+        <div class="section">
+          <div class="label">Contato rápido</div>
+          <div class="value" id="quick-contact">—</div>
+        </div>
+        <hr />
+        <div style="font-size:12px;color:#6b7280">Fontes públicas usadas (exemplos): sites de consulta de CNPJ, diretórios de empresas e Receita Federal.</div>
+      </aside>
+    </div>
+
+    <footer>
+      <div>Gere este ficheiro localmente. Para atualização automática, altere o script para chamar uma API pública/privada que forneça dados do CNPJ.</div>
+    </footer>
+  </div>
+
+  <script>
+    // ===== Dados embutidos coletados das fontes públicas citadas no chat =====
+    const companyData = {
+      cnpj: "51.439.954/0001-36",
+      razao_social: "CONSTRUTORA SOL SOLUCOES EM OBRAS LOPES LTDA",
+      tipo: "MATRIZ",
+      abertura: "17/07/2023",
+      situacao: "ATIVA",
+      data_situacao: "17/07/2023",
+      capital_social: "R$ 10.000,00",
+      simples: true,
+      endereco: {
+        logradouro: "RUA ROMEU MARTINS",
+        numero: "579",
+        complemento: "CONJ 403",
+        bairro: "MONTESE",
+        municipio: "FORTALEZA",
+        uf: "CE",
+        cep: "60420-720"
+      },
+      contato: {
+        telefone: "(85) 99610-5887",
+        email: "contato@exemplo.com" // substituir pelo email real se desejar
+      },
+      atividades: {
+        principal: {cnae: "4120-4/00", descricao: "Construção de edifícios"},
+        secundarias: [
+          {cnae:"4211-1/01", descricao:"Construção de rodovias e ferrovias"},
+          {cnae:"4213-8/00", descricao:"Obras de urbanização - ruas"},
+          {cnae:"4292-8/01", descricao:"Montagem de estruturas metálicas"},
+          {cnae:"4313-4/00", descricao:"Obras de terraplenagem"},
+          {cnae:"4399-1/01", descricao:"Administração de obras"},
+          {cnae:"6821-8/01", descricao:"Corretagem na compra e venda e avaliação de imóveis"}
+        ]
+      },
+      socios: [
+        {nome: "VALDENIR ROSA LOPES", qualificacao: "Sócio-Administrador", entrada: "12/12/2023"}
+      ],
+      // links úteis predefinidos
+      links: {
+        receita: "https://www.gov.br/receitafederal/pt-br/servicos/cadastro/cnpj",
+        mapsSearch: `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent("Rua Romeu Martins 579 Fortaleza CE")}`
+      },
+      fonte_obtencao: [
+        "Diretórios públicos de empresa (ex.: maismei, cnpj.biz, casadosdados)",
+        "Consulta públi
